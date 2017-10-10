@@ -1,0 +1,137 @@
+.social-media {
+	background: $color-dark;
+	@media(min-width: 1100px) {
+		order: 1;
+		padding: 0;
+	}
+}
+
+.social {
+	text-align: right;
+	@media(min-width:1100px) {
+		padding: 0;
+		margin: 0;
+	}
+	&__item {
+		display: inline-block;
+		&--icon {
+			display: block;
+			width: .75em;
+			height: auto;
+			margin: 0 .5em;
+			cursor: pointer;
+		}
+	}
+}
+
+.intro {
+	margin: 1em  .75em;
+	p {
+		color: #fff;
+	}
+	@media(min-width: 769px) {
+		margin: 1em;
+		p {
+			font-size: 1.25em;
+		}
+	}
+
+	@media(min-width: 1100px) {
+		margin: 1em  2.5em;
+	}
+}
+
+.books-wrapper {
+	@media(min-width: 1100px) {
+		display: flex;
+	}
+}
+
+// featured section
+.featured {
+	@media(min-width: 1100px) {
+		flex-grow: 2;
+		order: 1;
+	}
+}
+
+.featured-book {
+	margin: 1em;
+	text-align: center;
+	padding: 1em;
+	background: white;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.featured-book:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+//books section
+
+.books {
+	margin: .5em;
+	flex-grow:1;
+	padding: .5em;
+}
+
+.book {
+	display: flex;
+	margin: .5em 0;
+	padding: .15em;
+	background: $color-light;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	border-radius: 2px;
+	&__image {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 .5em;
+		img{
+		width: 130px;
+		height: 170px;
+		}
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 1em;
+	}
+	&__title {
+		font-size: 1.25em;
+		text-align: center;
+		@media(min-width:1100px) {
+			font-size: 1.5em;
+		}
+	}
+	&__subtitle {
+		font-size: 1em;
+		margin-top: -.1em;
+		margin-bottom: .5em;
+		font-size: 1.1em;
+		color: $color-dark;
+	}
+}
+
+.highlight {
+	color: $color-dark;
+}
+
+@media(min-width:769px) {
+	.books {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.book {
+		margin:  .5em;
+		flex: 1 1 calc(50% - 1em);
+	}
+}
+
+.is-selected {
+	border: 4px solid $color-compliment
+}
